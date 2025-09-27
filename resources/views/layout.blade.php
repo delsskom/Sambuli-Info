@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>Sistem Informasi Kelurahan Sambuli</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+    </style>
 </head>
 <body class="bg-light">
 
@@ -24,11 +34,12 @@
     </nav>
 
     <!-- Content -->
-    <div class="container">
+    <main class="container">
         @yield('content')
-    </div>
+    </main>
 
-    <footer class="bg-dark text-white text-center py-3 mt-4">
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
         <small>&copy; {{ date('Y') }} Sistem Informasi Kelurahan Sambuli</small>
     </footer>
 </body>
