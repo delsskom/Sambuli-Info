@@ -7,22 +7,29 @@
         Menampilkan potensi alam dari masing-masing RT di Kelurahan Sambuli
     </p>
 
+    <div class="text-center mb-4">
+        <a href="{{ route('potensi.create') }}" class="btn btn-primary">
+            + Tambah Potensi
+        </a>
+    </div>
+
     <div class="row g-4">
         @foreach($rts as $rt)
             <div class="col-md-4">
                 <a href="{{ route('potensi.show', $rt->id) }}" class="text-decoration-none text-dark">
                     <div class="card shadow-lg border-0 h-100 card-hover">
-                        <img 
-                            src="https://source.unsplash.com/600x400/?farm,{{ $rt->nama }}" 
-                            class="card-img-top" 
-                            alt="Potensi {{ $rt->nama }}"
-                            onerror="this.style.display='none';"
-                        >
+                        <img src="https://source.unsplash.com/600x400/?village,{{ $rt->id }}" 
+                             class="card-img-top" alt="RT {{ $rt->id }} Potensi"
+                             onerror="this.style.display='none';">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold">{{ $rt->nama }}</h5>
-                            <p class="card-text text-muted">
-                                {{ $rt->potensi->pluck('nama')->join(', ') }}
-                            </p>
+                            <h5 class="card-title fw-bold">RT {{ $rt->id }}</h5>
+                            <ul class="text-muted list-unstyled">
+                                @forelse($rt->potensi as $p)
+                                    <li>{{ $p->nama_potensi }}</li>
+                                @empty
+                                    <li><em>Belum ada data potensi</em></li>
+                                @endforelse
+                            </ul>
                         </div>
                     </div>
                 </a>

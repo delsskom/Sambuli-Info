@@ -7,9 +7,6 @@
         <p class="lead">
             Menyajikan Profil & Potensi Daerah secara digital untuk masyarakat dan pemerintah
         </p>
-        <a href="{{ route('kelurahan.index') }}" class="btn btn-light btn-lg mt-3">
-            Jelajahi
-        </a>
     </div>
 
     <!-- Cards Section -->
