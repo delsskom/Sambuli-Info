@@ -1,135 +1,83 @@
-@extends('layout')
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Kelurahan Sambuli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-@section('content')
-    <!-- Hero Section -->
-    <section class="hero d-flex align-items-center justify-content-center text-center">
-        <div class="container">
-            <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
-                Selamat Datang di <span class="highlight">Sistem Informasi Kelurahan Sambuli</span>
-            </h1>
-            <p class="lead mb-5 typing-text">
-                Digitalisasi data & potensi alam Kelurahan Sambuli untuk masyarakat dan pemerintah.
-            </p>
-            <a href="{{ route('home') }}" 
-               class="btn btn-lg btn-light px-5 shadow-lg animate__animated animate__fadeInUp animate__delay-2s pulse-btn">
-                🌍 Lanjutkan
-            </a> 
-        </div>
-
-        <!-- Wave effect -->
-        <div class="custom-shape-divider-bottom-hero">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                 preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,
-                         743.25,14.19c-82.26-17.33-168.06-15.88
-                         -250.45,1.54-57.84,12.29-114,31.17-172,41.63
-                         -82.38,14.92-168.18,13.48-250.45-1.54V120H1200V95.8
-                         C1135.59,118.54,1060.91,113.63,985.66,92.83Z"
-                      class="shape-fill"></path>
-            </svg>
-        </div>
-    </section>
-@endsection
-
-@push('styles')
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-     
     <style>
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-        }
+    /* === Container slider horizontal === */
+    .image-slider-container {
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding: 15px 0;
+        scrollbar-width: thin;
+    }
 
-        /* Background Zoom Animation */
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: url("{{ asset('images/sambuli.png') }}") no-repeat center center / cover;
-            transform: scale(1);
-            animation: zoomBg 20s ease-in-out infinite alternate;
-            z-index: -2;
-        }
+    /* === Kotak gambar diperbesar === */
+    .image-slider-container img {
+        display: inline-block;
+        width: 240px;   /* ukuran lebih besar */
+        height: 150px;  
+        object-fit: cover;
+        margin-right: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        @keyframes zoomBg {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
-        }
+    .image-slider-container img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
 
-        /* Overlay hitam */
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: -1;
-        }
+    /* Scrollbar styling */
+    .image-slider-container::-webkit-scrollbar {
+        height: 6px;
+    }
+    .image-slider-container::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+    .image-slider-container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>
 
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
+</head>
+<body class="bg-light">
 
-        .hero h1,
-        .hero p {
-            color: #fff !important;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-        }
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Kelurahan Sambuli</a>
+        </div>
+    </nav>
 
-        .hero .highlight {
-            color: #ffda77;
-        }
+    <div class="container text-center">
+        <h1 class="fw-bold mb-3">Selamat Datang</h1>
+        <p class="text-muted mb-4">Sistem Informasi Potensi Kelurahan Sambuli</p>
 
-        /* Tombol berdenyut */
-        .pulse-btn {
-            animation: pulse 2s infinite;
-        }
+        <!-- === Slider Gambar === -->
+        <div class="image-slider-container">
+            <img src="{{ asset('images/sambuli1.png') }}" alt="Sambuli 1">
+            <img src="{{ asset('images/sambuli2.png') }}" alt="Sambuli 2">
+            <img src="{{ asset('images/sambuli3.png') }}" alt="Sambuli 3">
+            <img src="{{ asset('images/sambuli4.png') }}" alt="Sambuli 4">
+            <img src="{{ asset('images/sambuli5.png') }}" alt="Sambuli 5">
+            <img src="{{ asset('images/sambuli6.png') }}" alt="Sambuli 6">
+            <img src="{{ asset('images/sambuli7.png') }}" alt="Sambuli 7">
+        </div>
+        <!-- === End Slider Gambar === -->
 
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.6); }
-            70% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(255,255,255,0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0); }
-        }
+        <!-- Tombol Lanjutkan -->
+        <div class="mt-4">
+            <a href="{{ route('home') }}" class="btn btn-primary btn-lg px-4">Lanjutkan</a>
+        </div>
+    </div>
 
-        /* Wave effect */
-        .custom-shape-divider-bottom-hero {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            line-height: 0;
-        }
-
-        .custom-shape-divider-bottom-hero svg {
-            display: block;
-            width: 100%;
-            height: 100px;
-        }
-
-        .custom-shape-divider-bottom-hero .shape-fill {
-            fill: #ffffff;
-        }
-
-        /* Efek typing pada teks */
-        .typing-text {
-            display: inline-block;
-            border-right: 3px solid #fff;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 0;
-            animation: typing 5s steps(50, end) forwards, blink .75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink {
-            50% { border-color: transparent }
-        }
-    </style>
-@endpush
+</body>
+</html>
