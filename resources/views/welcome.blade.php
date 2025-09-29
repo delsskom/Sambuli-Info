@@ -710,7 +710,8 @@
         <div class="hero-content">
             <h1>Selamat Datang di Kelurahan Sambuli</h1>
             <p>Kelurahan Sambuli Menyimpan Potensi Menatap Masa Depan</p>
-            <a href="#profil" class="hero-btn">Jelajahi Potensi Kami</a>
+          <a href="{{ route('home') }}" class="hero-btn">Jelajahi Potensi Kami</a>
+
         </div>
     </section>
 
