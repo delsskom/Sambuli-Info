@@ -211,7 +211,7 @@
     <div class="main-container">
         <div class="header-section animate-on-scroll">
             <h1>Potensi Kelurahan Sambuli</h1>
-            <p>Kekayaan Alam dan Budaya yang Menawan</p>
+            <p>Kekayaan Alam yang Menawan</p>
         </div>
 
         <div class="table-section animate-on-scroll">
