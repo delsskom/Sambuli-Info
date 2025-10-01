@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelurahan Sambuli</title>
+    <title>Kelurahan Sambuli - Permata Wakatobi</title>
     <style>
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
         * {
             margin: 0;
@@ -53,14 +53,14 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            padding: 20px 0;
+            padding: 15px 0;
             z-index: 1000;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
 
         nav.scrolled {
-            padding: 15px 0;
+            padding: 10px 0;
             box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
         }
 
@@ -74,7 +74,7 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
             background: linear-gradient(135deg, #667eea, #764ba2);
             -webkit-background-clip: text;
@@ -82,9 +82,24 @@
             background-clip: text;
         }
 
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #667eea;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             list-style: none;
         }
 
@@ -94,6 +109,7 @@
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
+            font-size: 0.95rem;
         }
 
         .nav-links a::after {
@@ -114,7 +130,7 @@
         /* Hero Section */
         .hero {
             position: relative;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -123,6 +139,7 @@
             color: white;
             overflow: hidden;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px 40px;
         }
 
         .hero::before {
@@ -145,19 +162,20 @@
         .hero-content {
             position: relative;
             z-index: 2;
+            max-width: 900px;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: clamp(2rem, 5vw, 4rem);
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease-out;
             font-weight: 700;
             text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         .hero p {
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease-out 0.2s backwards;
             font-weight: 300;
@@ -166,10 +184,10 @@
         .hero-btn {
             background: white;
             color: #667eea;
-            padding: 18px 50px;
+            padding: 15px 40px;
             border: none;
             border-radius: 50px;
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
             font-weight: 600;
             cursor: pointer;
             transition: all 0.4s ease;
@@ -182,7 +200,6 @@
         .hero-btn:hover {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
-            background: #f8f9fa;
         }
 
         @keyframes fadeInUp {
@@ -196,11 +213,11 @@
             }
         }
 
-        /* Floating Elements */
         .floating-element {
             position: absolute;
             animation: floating 6s ease-in-out infinite;
             opacity: 0.2;
+            font-size: 2rem;
         }
 
         .floating-element:nth-child(1) {
@@ -233,7 +250,7 @@
         /* Stats Section */
         .stats-section {
             background: white;
-            padding: 80px 20px;
+            padding: 60px 20px;
             position: relative;
         }
 
@@ -241,13 +258,13 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
 
         .stat-card {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 20px;
             background: linear-gradient(135deg, #667eea15, #764ba215);
             border-radius: 20px;
             transition: all 0.3s ease;
@@ -261,7 +278,7 @@
         }
 
         .stat-number {
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 700;
             background: linear-gradient(135deg, #667eea, #764ba2);
             -webkit-background-clip: text;
@@ -271,7 +288,7 @@
         }
 
         .stat-label {
-            font-size: 1rem;
+            font-size: clamp(0.85rem, 2vw, 1rem);
             color: #666;
             font-weight: 500;
         }
@@ -279,21 +296,10 @@
         /* Profile Section */
         .profile-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 100px 20px;
+            padding: 80px 20px;
             color: white;
             position: relative;
             overflow: hidden;
-        }
-
-        .profile-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            border-radius: 50%;
         }
 
         .container {
@@ -305,8 +311,8 @@
 
         .section-title {
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 15px;
             font-weight: 700;
             position: relative;
             padding-bottom: 20px;
@@ -326,24 +332,23 @@
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.2rem;
-            margin-bottom: 60px;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin-bottom: 50px;
             opacity: 0.9;
             font-weight: 300;
         }
 
         .profile-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-top: 50px;
-            align-items: center;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 40px;
         }
 
         .profile-text {
             background: rgba(255, 255, 255, 0.15);
-            padding: 40px;
-            border-radius: 25px;
+            padding: 30px;
+            border-radius: 20px;
             backdrop-filter: blur(20px);
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -356,51 +361,35 @@
         }
 
         .profile-text h3 {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
             margin-bottom: 20px;
             font-weight: 600;
         }
 
         .profile-text p {
-            line-height: 2;
-            margin-bottom: 20px;
+            line-height: 1.8;
+            margin-bottom: 15px;
             text-align: justify;
-            font-size: 1.05rem;
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
             opacity: 0.95;
         }
 
         .profile-image-wrapper {
             position: relative;
-            border-radius: 25px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
             transition: all 0.5s ease;
         }
 
         .profile-image-wrapper:hover {
-            transform: scale(1.05) rotate(2deg);
+            transform: scale(1.02);
             box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
-        }
-
-        .profile-image-wrapper::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .profile-image-wrapper:hover::before {
-            opacity: 1;
         }
 
         .profile-image-wrapper img {
             width: 100%;
-            height: 450px;
+            height: 300px;
             object-fit: cover;
             display: block;
         }
@@ -408,12 +397,11 @@
         /* History Section */
         .history-section {
             background: rgba(255, 255, 255, 0.1);
-            padding: 50px;
-            border-radius: 25px;
-            margin-top: 50px;
+            padding: 40px 25px;
+            border-radius: 20px;
+            margin-top: 40px;
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            grid-column: 1 / -1;
             transition: all 0.3s ease;
         }
 
@@ -423,21 +411,21 @@
         }
 
         .history-section h3 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 25px;
             font-weight: 600;
             text-align: center;
         }
 
         .history-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
 
         .history-item {
             background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
             border-left: 4px solid white;
             transition: all 0.3s ease;
@@ -449,61 +437,45 @@
         }
 
         .history-item p {
-            line-height: 1.9;
+            line-height: 1.8;
             text-align: justify;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
             opacity: 0.95;
         }
 
         /* Vision Mission Section */
         .vision-mission {
-            padding: 100px 20px;
+            padding: 80px 20px;
             background: white;
             position: relative;
         }
 
         .vm-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            margin-top: 60px;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .vm-card {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 50px;
-            border-radius: 25px;
+            padding: 35px 25px;
+            border-radius: 20px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .vm-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(135deg, transparent 30%, rgba(102, 126, 234, 0.1) 50%, transparent 70%);
-            transform: rotate(45deg);
-            transition: all 0.6s ease;
-        }
-
-        .vm-card:hover::before {
-            transform: rotate(45deg) translate(50%, 50%);
-        }
-
         .vm-card:hover {
-            transform: translateY(-15px) scale(1.02);
+            transform: translateY(-10px);
             box-shadow: 0 25px 60px rgba(102, 126, 234, 0.3);
         }
 
         .vm-card h3 {
             color: #667eea;
-            font-size: 2.2rem;
-            margin-bottom: 25px;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin-bottom: 20px;
             font-weight: 700;
             position: relative;
             z-index: 1;
@@ -511,21 +483,21 @@
 
         .vm-card p {
             color: #555;
-            line-height: 2;
-            font-size: 1.1rem;
+            line-height: 1.8;
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
             position: relative;
             z-index: 1;
         }
 
         .vm-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 15px;
             display: block;
         }
 
         /* Documentation Section */
         .documentation {
-            padding: 100px 20px;
+            padding: 80px 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             position: relative;
@@ -534,23 +506,23 @@
 
         .doc-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
         }
 
         .doc-card {
             position: relative;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             transition: all 0.4s ease;
             cursor: pointer;
-            height: 300px;
+            height: 250px;
         }
 
         .doc-card:hover {
-            transform: translateY(-15px) scale(1.05);
+            transform: translateY(-10px) scale(1.02);
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         }
 
@@ -563,7 +535,7 @@
         }
 
         .doc-card:hover img {
-            transform: scale(1.2) rotate(5deg);
+            transform: scale(1.15);
         }
 
         .doc-overlay {
@@ -572,7 +544,7 @@
             left: 0;
             right: 0;
             background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-            padding: 30px;
+            padding: 20px;
             transform: translateY(100%);
             transition: transform 0.4s ease;
         }
@@ -582,15 +554,46 @@
         }
 
         .doc-overlay p {
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
             font-weight: 500;
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .map-card {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+        }
+
+        .map-card iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+            display: block;
         }
 
         /* Footer */
         footer {
             background: #1a1a2e;
             color: white;
-            padding: 60px 20px 30px;
+            padding: 50px 20px 25px;
             text-align: center;
         }
 
@@ -601,31 +604,33 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
         .footer-section h3 {
-            margin-bottom: 20px;
-            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
         }
 
         .footer-section p {
             line-height: 1.8;
             opacity: 0.8;
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         .social-links {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
 
         .social-links a {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
@@ -634,7 +639,7 @@
             transition: all 0.3s ease;
             text-decoration: none;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         .social-links a:hover {
@@ -643,35 +648,13 @@
         }
 
         .copyright {
-            padding-top: 30px;
+            padding-top: 25px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             opacity: 0.7;
+            font-size: clamp(0.85rem, 2vw, 1rem);
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero h1 { font-size: 3rem; }
-            .stats-container { grid-template-columns: repeat(2, 1fr); }
-            .profile-grid { grid-template-columns: 1fr; }
-            .history-content { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1.2rem; }
-            .vm-grid { grid-template-columns: 1fr; }
-            .doc-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-grid { grid-template-columns: 1fr; }
-            .section-title { font-size: 2rem; }
-        }
-
-        @media (max-width: 480px) {
-            .doc-grid { grid-template-columns: 1fr; }
-            .stats-container { grid-template-columns: 1fr; }
-        }
-
-        /* Scroll Progress Bar */
+        /* Progress Bar */
         .progress-bar {
             position: fixed;
             top: 0;
@@ -680,6 +663,73 @@
             background: linear-gradient(90deg, #667eea, #764ba2);
             z-index: 9999;
             transition: width 0.1s;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .profile-grid {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+
+            .history-content {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .vm-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .profile-image-wrapper img {
+                height: 400px;
+            }
+
+            .map-card iframe {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .nav-links.active {
+                max-height: 400px;
+            }
+
+            .floating-element {
+                font-size: 1.5rem;
+            }
+
+            .history-section {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -693,7 +743,12 @@
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">🏝️ Sambuli</div>
-            <ul class="nav-links">
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Beranda</a></li>
                 <li><a href="#profil">Profil</a></li>
                 <li><a href="#visi-misi">Visi & Misi</a></li>
@@ -710,8 +765,7 @@
         <div class="hero-content">
             <h1>Selamat Datang di Kelurahan Sambuli</h1>
             <p>Kelurahan Sambuli Menyimpan Potensi Menatap Masa Depan</p>
-          <a href="{{ route('home') }}" class="hero-btn">Jelajahi Potensi Kami</a>
-
+            <a href="#profil" class="hero-btn">Jelajahi Potensi Kami</a>
         </div>
     </section>
 
@@ -753,20 +807,20 @@
                 <div class="profile-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800" alt="Kelurahan Sambuli">
                 </div>
+            </div>
 
-                <!-- History Section -->
-                <div class="history-section">
-                    <h3>📜 Sejarah Kelurahan Sambuli</h3>
-                    <div class="history-content">
-                        <div class="history-item">
-                            <p>Kelurahan Sambuli memiliki sejarah panjang yang dimulai dari era pra-kemerdekaan. Nama "Sambuli" berasal dari bahasa lokal yang berarti "tempat berkumpul", mencerminkan peran penting wilayah ini sebagai pusat interaksi sosial masyarakat Wakatobi sejak dahulu kala.</p>
-                        </div>
-                        <div class="history-item">
-                            <p>Pada masa kolonial, Sambuli merupakan salah satu pelabuhan kecil yang ramai dikunjungi pedagang dari berbagai pulau di Nusantara. Setelah kemerdekaan Indonesia, Sambuli terus berkembang dan secara resmi ditetapkan sebagai kelurahan pada tahun 1982.</p>
-                        </div>
-                        <div class="history-item">
-                            <p>Masyarakat Sambuli dikenal dengan tradisi bahari yang kuat, dengan mayoritas penduduk bermata pencaharian sebagai nelayan dan pengrajin perahu tradisional. Kearifan lokal dalam menjaga ekosistem laut telah diwariskan turun-temurun.</p>
-                        </div>
+            <!-- History Section -->
+            <div class="history-section">
+                <h3>📜 Sejarah Kelurahan Sambuli</h3>
+                <div class="history-content">
+                    <div class="history-item">
+                        <p>Kelurahan Sambuli memiliki sejarah panjang yang dimulai dari era pra-kemerdekaan. Nama "Sambuli" berasal dari bahasa lokal yang berarti "tempat berkumpul", mencerminkan peran penting wilayah ini sebagai pusat interaksi sosial masyarakat Wakatobi sejak dahulu kala.</p>
+                    </div>
+                    <div class="history-item">
+                        <p>Pada masa kolonial, Sambuli merupakan salah satu pelabuhan kecil yang ramai dikunjungi pedagang dari berbagai pulau di Nusantara. Setelah kemerdekaan Indonesia, Sambuli terus berkembang dan secara resmi ditetapkan sebagai kelurahan pada tahun 1982.</p>
+                    </div>
+                    <div class="history-item">
+                        <p>Masyarakat Sambuli dikenal dengan tradisi bahari yang kuat, dengan mayoritas penduduk bermata pencaharian sebagai nelayan dan pengrajin perahu tradisional. Kearifan lokal dalam menjaga ekosistem laut telah diwariskan turun-temurun.</p>
                     </div>
                 </div>
             </div>
@@ -841,25 +895,21 @@
             </div>
         </div>
     </section>
-  <!-- Lokasi Kelurahan Sambuli -->
-<section class="container my-5" id="lokasi">
-  <div class="card shadow-lg border-0 rounded-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-    <div class="card-header text-center fw-bold" style="background: rgba(255,255,255,0.15); border-bottom: none; font-size: 1.3rem;">
-      📍 Lokasi Kelurahan Sambuli
-    </div>
-    <div class="card-body p-0" style="border-radius: 0 0 .5rem .5rem; overflow: hidden;">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992.4309706422698!2d122.547048!3d-3.973294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d983f1e6c3c4a6b%3A0x4f1b0b2b6213c!2sSambuli!5e0!3m2!1sid!2sid!4v1696062500000!5m2!1sid!2sid" 
-        width="100%" 
-        height="400" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-card">
+            <div class="map-header">
+                📍 Lokasi Kelurahan Sambuli
+            </div>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992.4309706422698!2d122.547048!3d-3.973294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d983f1e6c3c4a6b%3A0x4f1b0b2b6213c!2sSambuli!5e0!3m2!1sid!2sid!4v1696062500000!5m2!1sid!2sid" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -901,6 +951,20 @@
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         const progressBar = document.getElementById('progressBar');
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        // Mobile menu toggle
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -921,9 +985,10 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const offsetTop = target.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
                     });
                 }
             });
@@ -932,7 +997,7 @@
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -945,12 +1010,19 @@
         }, observerOptions);
 
         // Observe elements
-        document.querySelectorAll('.stat-card, .vm-card, .doc-card, .profile-text, .history-item').forEach(el => {
+        document.querySelectorAll('.stat-card, .vm-card, .doc-card, .profile-text, .history-item, .profile-image-wrapper').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
         });
+
+        // Prevent horizontal scroll on mobile
+        document.body.addEventListener('touchmove', function(e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
     </script>
 </body>
 </html>
