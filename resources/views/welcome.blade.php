@@ -817,7 +817,7 @@
                 <div class="stat-label">Jumlah Penduduk</div>
             </div>
             <div class="stat-card fade-in">
-                <div class="stat-number">42</div>
+                <div class="stat-number">1982</div>
                 <div class="stat-label">Tahun Berdiri</div>
             </div>
             <div class="stat-card fade-in">
@@ -835,9 +835,9 @@
             
             <div class="profile-grid">
                 <div class="profile-text fade-in">
-                    <h3>✨ Tentang Sambuli</h3>
-                    <p>Kelurahan Sambuli adalah salah satu kelurahan yang terletak di Kecamatan Wangi-Wangi Selatan, Kabupaten Wakatobi. Memiliki potensi wisata bahari dan budaya yang kaya, Sambuli menjadi salah satu destinasi unggulan di Wakatobi.</p>
-                    <p>Dengan wilayah seluas 125 hektar dengan jumlah penduduk mencapai 2.500 jiwa, Sambuli terus berkembang sebagai pusat kegiatan ekonomi dan pariwisata berbasis masyarakat dengan mengedepankan kelestarian lingkungan dan kearifan lokal.</p>
+                    <h3>Tentang Sambuli</h3>
+                    <p>Kelurahan Sambuli adalah salah satu kelurahan yang terletak di Kecamatan Nambo, Kota Kendari, Provinsi Sulawesi Tenggara, Indonesia. Luas wilayah Kelurahan Sambuli sekitar 374 hektar. Kelurahan ini memiliki topografi yang khas dan merupakan bagian dari Kecamatan Nambo yang memiliki enam kelurahan dengan berbagai potensi dan fasilitas publik yang memadai. Kelurahan Sambuli juga dikenal memiliki jumlah usia produktif yang cukup tinggi yakni sekitar 81,15%, serta nilai-nilai modal sosial yang kuat seperti gotong royong dan kepedulian sosial antar warga masih berjalan dengan baik..</p>
+                    <p>Secara administratif, Kecamatan Nambo memiliki 6 kelurahan dan terbagi dalam beberapa RW dan RT, di mana Kelurahan Sambuli memiliki 2 RW. Kelurahan ini juga dilengkapi dengan aparatur desa dan berbagai fasilitas seperti balai desa dan pos keamanan lingkungan. Selain itu, Kelurahan Sambuli aktif dalam berbagai program sosial, seperti Kampung Keluarga Berkualitas (Kampung KB) yang melibatkan penyuluh keluarga berencana dan berbagai kelompok kegiatan masyarakat..</p>
                 </div>
                 
                 <div class="profile-image-wrapper fade-in">
@@ -847,7 +847,7 @@
 
             <!-- History Section -->
             <div class="history-section fade-in">
-                <h3>📜 Sejarah Kelurahan Sambuli</h3>
+                <h3> Sejarah Kelurahan Sambuli</h3>
                 <div class="history-content">
                     <div class="history-item">
                         <p>Kelurahan Sambuli memiliki sejarah panjang yang dimulai dari era pra-kemerdekaan. Nama "Sambuli" berasal dari bahasa lokal yang berarti "tempat berkumpul", mencerminkan peran penting wilayah ini sebagai pusat interaksi sosial masyarakat Wakatobi sejak dahulu kala.</p>
@@ -871,13 +871,11 @@
             
             <div class="vm-grid">
                 <div class="vm-card fade-in">
-                    <span class="vm-icon">🎯</span>
                     <h3>Visi Kelurahan</h3>
                     <p>Mewujudkan Kelurahan Sambuli yang maju, sejahtera, dan lestari berbasis potensi lokal dan pemberdayaan masyarakat menuju kehidupan yang lebih baik dengan tetap menjaga kelestarian lingkungan dan nilai-nilai kearifan lokal.</p>
                 </div>
                 
                 <div class="vm-card fade-in">
-                    <span class="vm-icon">🚀</span>
                     <h3>Misi Kelurahan</h3>
                     <p>Meningkatkan kualitas pelayanan publik, mengembangkan ekonomi berbasis masyarakat, melestarikan budaya dan lingkungan, serta membangun infrastruktur yang mendukung kesejahteraan masyarakat Sambuli secara berkelanjutan.</p>
                 </div>
