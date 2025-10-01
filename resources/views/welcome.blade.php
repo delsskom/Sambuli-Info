@@ -841,25 +841,25 @@
             </div>
         </div>
     </section>
-    <section class="container my-5">
-    <div class="card shadow-lg border-0 rounded-3">
-        <div class="card-header bg-primary text-white text-center fw-bold">
-            Lokasi Kelurahan Sambuli
-        </div>
-        <div class="card-body p-0">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992.4309706422698!2d122.547048!3d-3.973294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d983f1e6c3c4a6b%3A0x4f1b0b2b6213c!2sSambuli!5e0!3m2!1sid!2sid!4v1696062500000!5m2!1sid!2sid" 
-                width="100%" 
-                height="400" 
-                style="border:0; border-radius: 0 0 .5rem .5rem;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
+  <!-- Lokasi Kelurahan Sambuli -->
+<section class="container my-5" id="lokasi">
+  <div class="card shadow-lg border-0 rounded-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+    <div class="card-header text-center fw-bold" style="background: rgba(255,255,255,0.15); border-bottom: none; font-size: 1.3rem;">
+      📍 Lokasi Kelurahan Sambuli
     </div>
+    <div class="card-body p-0" style="border-radius: 0 0 .5rem .5rem; overflow: hidden;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992.4309706422698!2d122.547048!3d-3.973294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d983f1e6c3c4a6b%3A0x4f1b0b2b6213c!2sSambuli!5e0!3m2!1sid!2sid!4v1696062500000!5m2!1sid!2sid" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
 </section>
-
 
     <!-- Footer -->
     <footer>
