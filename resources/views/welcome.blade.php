@@ -801,7 +801,7 @@
         <div class="hero-content">
             <h1>Selamat Datang di Kelurahan Sambuli</h1>
             <p>Kelurahan Sambuli Menyimpan Potensi Menatap Masa Depan</p>
-            <a href="#profil" class="hero-btn">Jelajahi Potensi Kami</a>
+           <a href="{{ route('home') }}" class="hero-btn">Jelajahi Potensi Sambuli</a>
         </div>
     </section>
 
@@ -971,10 +971,10 @@
             </div>
             
             <div class="social-links">
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="Twitter">🐦</a>
-                <a href="#" title="YouTube">📺</a>
+                <a href="#" title="Facebook"></a>
+                <a href="#" title="Instagram"></a>
+                <a href="#" title="Twitter"></a>
+                <a href="#" title="YouTube"></a>
             </div>
             
             <div class="copyright">
