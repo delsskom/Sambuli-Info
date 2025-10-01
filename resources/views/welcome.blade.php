@@ -969,14 +969,6 @@
                     (Libur Hari Sabtu & Minggu)</p>
                 </div>
             </div>
-            
-            <div class="social-links">
-                <a href="#" title="Facebook"></a>
-                <a href="#" title="Instagram"></a>
-                <a href="#" title="Twitter"></a>
-                <a href="#" title="YouTube"></a>
-            </div>
-            
             <div class="copyright">
                 <p>&copy; 2025 Kelurahan Sambuli. Semua Hak Dilindungi.</p>
             </div>
