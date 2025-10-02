@@ -850,13 +850,16 @@
                 <h3> Sejarah Kelurahan Sambuli</h3>
                 <div class="history-content">
                     <div class="history-item">
-                        <p>Kelurahan Sambuli memiliki sejarah panjang yang dimulai dari era pra-kemerdekaan. Nama "Sambuli" berasal dari bahasa lokal yang berarti "tempat berkumpul", mencerminkan peran penting wilayah ini sebagai pusat interaksi sosial masyarakat Wakatobi sejak dahulu kala.</p>
+                        <p>Kelurahan Sambuli memiliki sejarah panjang yang erat kaitannya dengan kehidupan pesisir di Sulawesi Tenggara. Nama “Sambuli” berasal dari istilah lokal yang berarti “tempat berkumpul”, mencerminkan peran wilayah ini sejak dahulu sebagai pusat interaksi sosial dan perdagangan antar-pulau. Sejak masa pra-kemerdekaan, Sambuli telah dikenal sebagai pemukiman pesisir dengan aktivitas pelabuhan kecil yang ramai disinggahi pedagang dari berbagai daerah.</p>
                     </div>
                     <div class="history-item">
-                        <p>Pada masa kolonial, Sambuli merupakan salah satu pelabuhan kecil yang ramai dikunjungi pedagang dari berbagai pulau di Nusantara. Setelah kemerdekaan Indonesia, Sambuli terus berkembang dan secara resmi ditetapkan sebagai kelurahan pada tahun 1982.</p>
+                        <p>Pada era kolonial, meskipun tidak termasuk pelabuhan besar, Sambuli tetap memiliki peran penting dalam jaringan perdagangan lokal. Kapal-kapal dagang yang melintasi perairan Sulawesi Tenggara sering singgah, membawa pengaruh ekonomi dan budaya yang turut membentuk karakter masyarakat setempat. Aktivitas ini memperkuat identitas Sambuli sebagai wilayah pesisir yang dinamis dan terbuka.</p>
                     </div>
                     <div class="history-item">
-                        <p>Masyarakat Sambuli dikenal dengan tradisi bahari yang kuat, dengan mayoritas penduduk bermata pencaharian sebagai nelayan dan pengrajin perahu tradisional. Kearifan lokal dalam menjaga ekosistem laut telah diwariskan turun-temurun.</p>
+                        <p>Setelah proklamasi kemerdekaan Republik Indonesia, proses pembentukan administrasi terus berkembang. Sambuli yang awalnya berupa komunitas pesisir secara bertahap ditata menjadi satuan wilayah dengan struktur pemerintahan yang lebih jelas, hingga akhirnya ditetapkan sebagai kelurahan. Status ini memperkuat fungsi pemerintahan lokal serta meningkatkan pelayanan publik bagi masyarakat.</p>
+                    </div>
+                    <div class="history-item">
+                        <p>Masyarakat Sambuli hingga kini tetap lekat dengan tradisi bahari. Mayoritas penduduk berprofesi sebagai nelayan, pengrajin perahu tradisional, dan pelaku usaha berbasis sumber daya laut. Kearifan lokal dalam menjaga laut—seperti aturan penangkapan bergilir dan perlindungan daerah pemijahan ikan—terus diwariskan turun-temurun. Seiring pembangunan modern, Sambuli berupaya menyeimbangkan kemajuan infrastruktur dengan pelestarian ekosistem laut, demi menjaga warisan budaya bahari sekaligus meningkatkan kesejahteraan warganya.</p>
                     </div>
                 </div>
             </div>
@@ -956,7 +959,7 @@
                 </div>
                 <div class="footer-section">
                     <h3>Kontak Kami</h3>
-                    <p>Email: sambuli@wakatobi.go.id<br>
+                    <p>Email: kelurahansambuli@gmail.com<br>
                     Telepon: (0401) 123456<br>
                     WhatsApp: +62 812-3456-7890</p>
                 </div>
