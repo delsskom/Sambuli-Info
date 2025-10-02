@@ -178,7 +178,6 @@
 
   <!-- MAIN -->
   <main class="content" role="main">
-    <h1 class="page-title">Struktur Organisasi Kelurahan Sambuli</h1>
     <img class="hero-img" src="{{ asset('images/strukturorganisasi.png') }}" alt="Struktur Organisasi">
   </main>
 

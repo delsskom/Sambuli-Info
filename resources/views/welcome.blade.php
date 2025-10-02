@@ -798,9 +798,9 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="floating-element">🌊</div>
-        <div class="floating-element">⛵</div>
-        <div class="floating-element">🐚</div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
         <div class="hero-content">
             <h1>Selamat Datang di Kelurahan Sambuli</h1>
             <p>Kelurahan Sambuli Menyimpan Potensi Menatap Masa Depan</p>
@@ -917,21 +917,21 @@
                     </div>
                 </div>
                 <div class="doc-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600" alt="Dokumentasi 4">
+                    <img src="images/kebun1.png" alt="Kelurahan Sambuli">
                     <div class="doc-overlay">
-                        <p>⛵ Perahu Tradisional</p>
+                        <p>Kebun Ubi Kayu</p>
                     </div>
                 </div>
                 <div class="doc-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1540202404-d0c7fe46a087?w=600" alt="Dokumentasi 5">
+                    <img src="images/perbatasan1.png" alt="Kelurahan Sambuli">
                     <div class="doc-overlay">
-                        <p>🌺 Kehidupan Masyarakat</p>
+                        <p>Perbatasan Sambuli</p>
                     </div>
                 </div>
                 <div class="doc-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=600" alt="Dokumentasi 6">
+                    <img src="images/KerjaBaktiBersama.png" alt="Kelurahan Sambuli">
                     <div class="doc-overlay">
-                        <p>🌇 Sunset di Sambuli</p>
+                        <p>Kerja Bakti Bersama</p>
                     </div>
                 </div>
             </div>
