@@ -791,6 +791,7 @@
                 <li><a href="#profil">Profil</a></li>
                 <li><a href="#visi-misi">Visi & Misi</a></li>
                 <li><a href="#dokumentasi">Dokumentasi</a></li>
+            <li><a href="{{ url('/struktur_organisasi') }}">Struktur Organisasi</a></li>
             </ul>
         </div>
     </nav>
@@ -868,6 +869,7 @@
             </div>
         </div>
     </section>
+    
 
     <!-- Vision Mission Section -->
     <section class="vision-mission" id="visi-misi">
@@ -888,7 +890,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Documentation Section -->
     <section class="documentation" id="dokumentasi">
         <div class="container">
@@ -950,6 +952,7 @@
             </iframe>
         </div>
     </section>
+    
 
     <!-- Footer -->
     <footer>
@@ -962,9 +965,8 @@
                 </div>
                 <div class="footer-section">
                     <h3>Kontak Kami</h3>
-                    <p>Email: kelurahansambuli@gmail.com<br>
-                    Telepon: (0401) 123456<br>
-                    WhatsApp: +62 812-3456-7890</p>
+                    <p>Email: kelurahansambuli3@gmail.com<br>
+                    WhatsApp: +62 852-4182-7228</p>
                 </div>
                 <div class="footer-section">
                     <h3>Jam Pelayanan</h3>
