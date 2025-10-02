@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#2C1A47">
     <title>Kelurahan Sambuli - Permata Wakatobi</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
@@ -37,7 +37,8 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+           background: linear-gradient(135deg, #1E3A5F 0%, #2C1A47 100%);
+
         }
 
         /* Progress Bar */
@@ -100,7 +101,7 @@
         .nav-toggle span {
             width: 25px;
             height: 3px;
-            background: #667eea;
+            background: #2C1A47;
             border-radius: 3px;
             transition: all 0.3s ease;
         }
@@ -142,7 +143,7 @@
             transform: translateX(-50%);
             width: 0;
             height: 2px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1E3A5F 0%, #2C1A47 100%);
             transition: width 0.3s ease;
         }
 
@@ -279,7 +280,7 @@
 
         .stat-card:active {
             transform: scale(0.95);
-            border-color: #667eea;
+            border-color: #2C1A47;
         }
 
         .stat-number {
@@ -607,7 +608,7 @@
         }
 
         .social-links a:active {
-            background: #667eea;
+            background: #2C1A47;
             transform: scale(0.9);
         }
 
@@ -690,7 +691,7 @@
 
             .stat-card:hover {
                 transform: translateY(-10px);
-                border-color: #667eea;
+                border-color: #2C1A47;
             }
 
             .doc-card:hover img {
@@ -707,7 +708,7 @@
             }
 
             .social-links a:hover {
-                background: #667eea;
+                background: #2C1A47;
                 transform: translateY(-5px) rotate(360deg);
             }
         }
@@ -902,7 +903,7 @@
                     </div>
                 </div>
                 <div class="doc-card fade-in">
-                    <img src="images/sambuli5.png" alt="Kelurahan Sambuli">
+                    <img src="images/sambuli8.png" alt="Kelurahan Sambuli">
                     <div class="doc-overlay">
                         <p>Matahari Sore</p>
                     </div>

@@ -14,7 +14,7 @@
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1E3A5F 0%, #2C1A47 100%);
             min-height: 100vh;
         }
 
@@ -59,11 +59,11 @@
         .table-title {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #667eea;
+            color: #2C1A47;
             text-align: center;
             margin-bottom: 30px;
             padding-bottom: 15px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #2C1A47;
             position: relative;
         }
 
@@ -146,11 +146,11 @@
         .map-title {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #667eea;
+            color: #2C1A47;
             text-align: center;
             margin-bottom: 30px;
             padding-bottom: 15px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #2C1A47;
             position: relative;
         }
 
@@ -173,7 +173,7 @@
         .back-button {
             position: fixed; top: 30px; left: 30px;
             background: rgba(255,255,255,0.9);
-            color: #667eea;
+            color: #2C1A47;
             padding: 12px 20px;
             border: none;
             border-radius: 25px;
