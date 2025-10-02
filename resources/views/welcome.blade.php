@@ -46,7 +46,7 @@
             top: 0;
             left: 0;
             height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1E3A5F 0%, #2C1A47 100%);
             z-index: 9999;
             transition: width 0.1s;
         }
@@ -81,7 +81,7 @@
         .logo {
             font-size: 1.3rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1E3A5F 0%, #2C1A47 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -126,7 +126,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: #2C1A47;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
@@ -160,9 +160,10 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
+            color: #f9fafcff;
             overflow: hidden;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: url('images/sambuli9.png') no-repeat center center;
+            background-size: cover;
             padding: 100px 20px 60px;
         }
 
@@ -192,7 +193,7 @@
 
         .hero-btn {
             background: white;
-            color: #667eea;
+            color: #2C1A47;
             padding: 14px 35px;
             border: none;
             border-radius: 50px;
@@ -284,7 +285,7 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1E3A5F 0%, #2C1A47 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -300,7 +301,7 @@
 
         /* Profile Section */
         .profile-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+         background: linear-gradient(135deg, #1E3A5F 0%, #2C1A47 100%);
             padding: 60px 15px;
             color: white;
             position: relative;
@@ -451,7 +452,7 @@
         }
 
         .vm-card h3 {
-            color: #667eea;
+            color: #2C1A47;
             font-size: 1.6rem;
             margin-bottom: 15px;
             font-weight: 700;
@@ -473,7 +474,7 @@
         /* Documentation Section */
         .documentation {
             padding: 60px 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1E3A5F 0%, #2C1A47 100%);
             color: white;
             position: relative;
             overflow: hidden;
@@ -537,7 +538,7 @@
         }
 
         .map-header {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1E3A5F 0%, #2C1A47 100%);
             color: white;
             padding: 15px;
             text-align: center;
@@ -554,7 +555,7 @@
 
         /* Footer */
         footer {
-            background: #1a1a2e;
+            background: #010111ff;
             color: white;
             padding: 40px 15px 20px;
             text-align: center;
@@ -817,7 +818,7 @@
                 <div class="stat-label">Jumlah Penduduk</div>
             </div>
             <div class="stat-card fade-in">
-                <div class="stat-number">1982</div>
+                <div class="stat-number">1981</div>
                 <div class="stat-label">Tahun Berdiri</div>
             </div>
             <div class="stat-card fade-in">
@@ -841,7 +842,8 @@
                 </div>
                 
                 <div class="profile-image-wrapper fade-in">
-                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800" alt="Kelurahan Sambuli">
+                    <img src="images/sambuli6.png" alt="Kelurahan Sambuli">
+
                 </div>
             </div>
 
@@ -894,21 +896,21 @@
             
             <div class="doc-grid">
                 <div class="doc-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600" alt="Dokumentasi 1">
+                    <img src="images/sambuli7.png" alt="Kelurahan Sambuli">
                     <div class="doc-overlay">
-                        <p>🌅 Pemandangan Kelurahan Sambuli</p>
+                        <p>Pemandangan karamba</p>
                     </div>
                 </div>
                 <div class="doc-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600" alt="Dokumentasi 2">
+                    <img src="images/sambuli5.png" alt="Kelurahan Sambuli">
                     <div class="doc-overlay">
-                        <p>⚓ Aktivitas Nelayan Tradisional</p>
+                        <p>Matahari Sore</p>
                     </div>
                 </div>
                 <div class="doc-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=600" alt="Dokumentasi 3">
+                    <img src="images/sambuli3.png" alt="Kelurahan Sambuli">
                     <div class="doc-overlay">
-                        <p>🏖️ Keindahan Pesisir Sambuli</p>
+                        <p>Keindahan Pesisir Sambuli </p>
                     </div>
                 </div>
                 <div class="doc-card fade-in">
