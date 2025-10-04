@@ -202,20 +202,20 @@
     </style>
 </head>
 <body>
-    <div class="floating-element">🌊</div>
-    <div class="floating-element">⛵</div>
-    <div class="floating-element">🐚</div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
 
     <a href="#" class="back-button" onclick="history.back()">← Kembali</a>
 
     <div class="main-container">
         <div class="header-section animate-on-scroll">
             <h1>Potensi Kelurahan Sambuli</h1>
-            <p>Kekayaan Alam yang Menawan</p>
+            <p>Kekayaan Potensi Sambuli yang Menawan</p>
         </div>
 
         <div class="table-section animate-on-scroll">
-            <h2 class="table-title">📊 Potensi Kelurahan Sambuli</h2>
+            <h2 class="table-title">📊 Potensi Alam Kelurahan Sambuli</h2>
             <div class="table-wrapper">
                 <table class="potensi-table">
                     <thead>
@@ -248,8 +248,39 @@
             </div>
         </div>
 
+       <div class="table-section animate-on-scroll">
+    <h2 class="table-title">🏛️ Potensi Sarana dan Prasarana</h2>
+    <div class="table-wrapper">
+        <table class="potensi-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>RT</th>
+                    <th>Kategori</th>
+                    <th>Jenis</th>
+                    <th>Jumlah</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($saranas as $index => $sarana)
+                    <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ $sarana->rt }}</td>
+                        <td>{{ $sarana->kategori }}</td>
+                        <td>{{ $sarana->jenis }}</td>
+                        <td>{{ $sarana->jumlah ?? '-' }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
         <div class="map-section animate-on-scroll">
-            <h2 class="map-title">🗺️ Peta Potensi Kelurahan Sambuli</h2>
+            <h2 class="map-title">🗺️ Peta Potensi Alam Kelurahan Sambuli</h2>
             <div class="map-container">
                 <img src="{{ asset('images/gambar-potensi.jpg') }}" alt="Peta Potensi Kelurahan Sambuli">
             </div>
