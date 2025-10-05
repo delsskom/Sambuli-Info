@@ -771,6 +771,81 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .slider-container {
+        overflow: hidden;
+        width: 100%;
+        }
+
+        .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease;
+        }
+
+        .doc-slide {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Laptop: 3 kolom */
+        grid-template-rows: repeat(2, auto);   /* Laptop: 2 baris */
+        gap: 10px;
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        padding: 10px 0;
+        }
+
+        .doc-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .doc-card img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        }
+
+        .doc-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 8px;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.85)); /* 🌿 lebih halus */
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        }
+
+        /* Tombol navigasi */
+        .slider-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+        }
+
+        .nav-btn {
+        background-color: #2c3e50;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 18px;
+        }
+
+        .nav-btn:hover {
+        background-color: #34495e;
+        }
+
+        /* 📱 HP: 1 kolom × 2 baris */
+        @media (max-width: 768px) {
+        .doc-slide {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+        }
+        }
+
     </style>
 </head>
 <body>
@@ -893,50 +968,41 @@
     
     <!-- Documentation Section -->
     <section class="documentation" id="dokumentasi">
-        <div class="container">
-            <h2 class="section-title">Galeri Dokumentasi</h2>
-            <p class="section-subtitle">Momen Indah dari Sambuli</p>
-            
-            <div class="doc-grid">
-                <div class="doc-card fade-in">
-                    <img src="images/sambuli7.png" alt="Kelurahan Sambuli">
-                    <div class="doc-overlay">
-                        <p>Pemandangan karamba</p>
-                    </div>
-                </div>
-                <div class="doc-card fade-in">
-                    <img src="images/sambuli8.png" alt="Kelurahan Sambuli">
-                    <div class="doc-overlay">
-                        <p>Matahari Sore</p>
-                    </div>
-                </div>
-                <div class="doc-card fade-in">
-                    <img src="images/sambuli3.png" alt="Kelurahan Sambuli">
-                    <div class="doc-overlay">
-                        <p>Keindahan Pesisir Sambuli </p>
-                    </div>
-                </div>
-                <div class="doc-card fade-in">
-                    <img src="images/kebun1.png" alt="Kelurahan Sambuli">
-                    <div class="doc-overlay">
-                        <p>Kebun Ubi Kayu</p>
-                    </div>
-                </div>
-                <div class="doc-card fade-in">
-                    <img src="images/perbatasan1.png" alt="Kelurahan Sambuli">
-                    <div class="doc-overlay">
-                        <p>Perbatasan Sambuli</p>
-                    </div>
-                </div>
-                <div class="doc-card fade-in">
-                    <img src="images/KerjaBaktiBersama.png" alt="Kelurahan Sambuli">
-                    <div class="doc-overlay">
-                        <p>Kerja Bakti Bersama</p>
-                    </div>
-                </div>
+    <div class="container">
+        <h2 class="section-title">Galeri Dokumentasi</h2>
+        <p class="section-subtitle">Momen Indah dari Sambuli</p>
+
+        <div class="slider-container">
+        <div class="slider-wrapper">
+            <!-- Slide 1 -->
+            <div class="doc-slide">
+            <div class="doc-card"><img src="images/sambuli7.png" alt=""><div class="doc-overlay"><p>Pemandangan karamba</p></div></div>
+            <div class="doc-card"><img src="images/sambuli8.png" alt=""><div class="doc-overlay"><p>Matahari Sore</p></div></div>
+            <div class="doc-card"><img src="images/sambuli3.png" alt=""><div class="doc-overlay"><p>Keindahan Pesisir Sambuli</p></div></div>
+            <div class="doc-card"><img src="images/kebun1.png" alt=""><div class="doc-overlay"><p>Kebun Ubi Kayu</p></div></div>
+            <div class="doc-card"><img src="images/perbatasan1.png" alt=""><div class="doc-overlay"><p>Perbatasan Sambuli</p></div></div>
+            <div class="doc-card"><img src="images/KerjaBaktiBersama.png" alt=""><div class="doc-overlay"><p>Kerja Bakti Bersama</p></div></div>
+            </div>
+
+            <!-- Slide 2 (contoh tambahan foto) -->
+            <div class="doc-slide">
+            <div class="doc-card"><img src="images/foto1.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 1</p></div></div>
+            <div class="doc-card"><img src="images/foto2.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 2</p></div></div>
+            <div class="doc-card"><img src="images/foto3.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 3</p></div></div>
+            <div class="doc-card"><img src="images/foto4.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 4</p></div></div>
+            <div class="doc-card"><img src="images/foto5.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 5</p></div></div>
+            <div class="doc-card"><img src="images/foto6.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 6</p></div></div>
             </div>
         </div>
+        </div>
+
+        <div class="slider-nav">
+        <button class="nav-btn prev-btn">◀</button>
+        <button class="nav-btn next-btn">▶</button>
+        </div>
+    </div>
     </section>
+
 
     <!-- Map Section -->
     <section class="map-section">
@@ -1159,5 +1225,30 @@
             document.body.appendChild(script);
         }
     </script>
+    <script>
+        const wrapper = document.querySelector('.slider-wrapper');
+        const slides = document.querySelectorAll('.doc-slide');
+        const nextBtn = document.querySelector('.next-btn');
+        const prevBtn = document.querySelector('.prev-btn');
+
+        let currentSlide = 0;
+
+        function updateSlider() {
+            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide++;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            updateSlider();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide--;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            updateSlider();
+        });
+    </script>
+
 </body>
 </html>
