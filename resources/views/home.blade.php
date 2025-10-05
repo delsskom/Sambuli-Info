@@ -212,8 +212,48 @@
         <div class="header-section animate-on-scroll">
             <h1>Potensi Kelurahan Sambuli</h1>
             <p>Kekayaan Potensi Sambuli yang Menawan</p>
-        </div>
+            
+        </div><!-- Tambahkan di atas script existing atau di bawah semua tabel -->
+<div style="text-align:right; margin-bottom:20px;">
+    <input type="text" id="searchInput" placeholder="🔍 Cari RT..." style="padding:12px; border:2px solid #764ba2; border-radius:12px; width:250px; font-size:15px;">
+</div>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const searchBox = document.getElementById("searchInput");
+
+    function runSearch() {
+        const query = searchBox.value.trim().toLowerCase();
+
+        // Filter semua tabel .potensi-table
+        document.querySelectorAll('.potensi-table').forEach(table => {
+            table.querySelectorAll('tbody tr').forEach(row => {
+                const rtCell = row.cells[1].textContent.toLowerCase(); // kolom RT selalu index ke-1
+                if (rtCell.includes(query)) {
+                    row.style.display = '';
+                    row.style.backgroundColor = '#fffa9c';
+                    row.style.borderRadius = '6px';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    // Event saat mengetik
+    searchBox.addEventListener('input', runSearch);
+
+    // Event saat tekan Enter
+    searchBox.addEventListener('keydown', e => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            runSearch();
+        }
+    });
+});
+</script>
+
+        
         <div class="table-section animate-on-scroll">
             <h2 class="table-title">📊 Potensi Alam Kelurahan Sambuli</h2>
             <div class="table-wrapper">
@@ -227,7 +267,7 @@
                             <th>Peternakan</th>
                             <th>Perikanan</th>
                             <th>Sumber Air</th>
-                            <th>Lainnya</th>
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -240,7 +280,7 @@
                                 <td>{{ $potensi->peternakan ?? '-' }}</td>
                                 <td>{{ $potensi->perikanan ?? '-' }}</td>
                                 <td>{{ $potensi->sumber_air ?? '-' }}</td>
-                                <td>{{ $potensi->lainnya ?? '-' }}</td>
+                               
                             </tr>
                         @endforeach
                     </tbody>
@@ -265,7 +305,7 @@
                 @foreach($saranas as $index => $sarana)
                     <tr>
                         <td>{{ $index + 1 }}</td>
-                        <td>{{ $sarana->rt }}</td>
+                        <td>{{ $sarana->potensi_id }}</td>
                         <td>{{ $sarana->kategori }}</td>
                         <td>{{ $sarana->jenis }}</td>
                         <td>{{ $sarana->jumlah ?? '-' }}</td>
@@ -277,9 +317,174 @@
 </div>
 
 
+<div class="table-section animate-on-scroll">
+    <h2 class="table-title">📊 Perbandingan Potensi Alam per RT (Persentase)</h2>
 
+    <div style="text-align:center; margin-bottom:20px;">
+        <label for="kategoriSelect" style="font-weight:600; margin-right:10px;">Pilih Kategori:</label>
+        <select id="kategoriSelect" style="padding:8px 12px; border:2px solid #764ba2; border-radius:8px;">
+            <option value="jumlah_kk">Jumlah KK</option>
+            <option value="perkebunan">Perkebunan</option>
+            <option value="peternakan">Peternakan</option>
+            <option value="perikanan">Perikanan</option>
+            <option value="sumber_air">Sumber Air</option>
+        </select>
+    </div>
 
-        <div class="map-section animate-on-scroll">
+    <div class="table-wrapper" style="text-align:center;">
+        <!-- Batasi ukuran canvas agar proporsional -->
+        <canvas id="potensiPieChart" style="max-width:600px; max-height:400px; margin:0 auto;"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const potensiData = [
+        { rt: 'RT 1', jumlah_kk: 104, perkebunan: 0, peternakan: 1, perikanan: 2, sumber_air: 1 },
+        { rt: 'RT 2', jumlah_kk: 62, perkebunan: 2, peternakan: 0, perikanan: 0, sumber_air: 3 },
+        { rt: 'RT 3', jumlah_kk: 72, perkebunan: 3, peternakan: 4, perikanan: 1, sumber_air: 2 },
+        { rt: 'RT 4', jumlah_kk: 60, perkebunan: 3, peternakan: 1, perikanan: 0, sumber_air: 2 },
+        { rt: 'RT 5', jumlah_kk: 60, perkebunan: 6, peternakan: 3, perikanan: 0, sumber_air: 2 },
+        { rt: 'RT 6', jumlah_kk: 92, perkebunan: 0, peternakan: 1, perikanan: 0, sumber_air: 1 },
+        { rt: 'RT 7', jumlah_kk: 68, perkebunan: 1, peternakan: 1, perikanan: 2, sumber_air: 2 }
+    ];
+
+    const ctx = document.getElementById('potensiPieChart').getContext('2d');
+    const colors = ['#FF6384','#36A2EB','#FFCE56','#4BC0C0','#9966FF','#FF9F40','#C9CBCF'];
+
+    let potensiChart = null;
+
+    function updateChart(kategori) {
+        const labels = potensiData.map(d => d.rt);
+        const dataValues = potensiData.map(d => d[kategori]);
+        const total = dataValues.reduce((a,b) => a + b, 0);
+
+        if (potensiChart) potensiChart.destroy();
+
+        potensiChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: kategori,
+                    data: dataValues,
+                    backgroundColor: colors,
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Biarkan tinggi dan lebar diatur manual
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const value = context.raw;
+                                const percentage = total ? ((value / total) * 100).toFixed(1) : 0;
+                                return `${context.label}: ${value} (${percentage}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    updateChart('jumlah_kk');
+
+    document.getElementById('kategoriSelect').addEventListener('change', function() {
+        updateChart(this.value);
+    });
+</script>
+
+<div class="table-section animate-on-scroll">
+    <h2 class="table-title">📊 Perbandingan Potensi Sarana & Prasarana per RT (Persentase)</h2>
+
+    <div style="text-align:center; margin-bottom:20px;">
+        <label for="kategoriSaranaSelect" style="font-weight:600; margin-right:10px;">Pilih Kategori:</label>
+        <select id="kategoriSaranaSelect" style="padding:8px 12px; border:2px solid #764ba2; border-radius:8px;">
+            <option value="Rambu jalan">Rambu jalan</option>
+            <option value="Sekolah">Sekolah</option>
+            <option value="Masjid">Masjid</option>
+            <option value="Lampu jalan">Lampu jalan</option>
+            <option value="Jembatan">Jembatan</option>
+        </select>
+    </div>
+
+    <div class="table-wrapper" style="text-align:center;">
+        <!-- Batasi ukuran canvas agar proporsional -->
+        <canvas id="saranaPieChart" style="max-width:600px; max-height:400px; margin:0 auto;"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const saranaData = [
+        { rt: 'RT 1', 'Rambu jalan': 3, 'Sekolah': 1, 'Masjid': 0, 'Lampu jalan': 4 },
+        { rt: 'RT 2', 'Rambu jalan': 1, 'Sekolah': 0, 'Masjid': 1, 'Lampu jalan': 2 },
+        { rt: 'RT 3', 'Rambu jalan': 4, 'Sekolah': 0, 'Masjid': 0, 'Lampu jalan': 0 },
+        { rt: 'RT 4', 'Rambu jalan': 0, 'Sekolah': 1, 'Masjid': 0, 'Lampu jalan': 6 },
+        { rt: 'RT 5', 'Rambu jalan': 0, 'Sekolah': 0, 'Masjid': 0, 'Lampu jalan': 8 },
+        { rt: 'RT 6', 'Rambu jalan': 1, 'Sekolah': 0, 'Masjid': 1, 'Lampu jalan': 0 },
+        { rt: 'RT 7', 'Rambu jalan': 3, 'Sekolah': 0, 'Masjid': 1, 'Jembatan': 1, 'Lampu jalan': 0 }
+    ];
+
+    const ctxSarana = document.getElementById('saranaPieChart').getContext('2d');
+const colorsSarana = ['#FF6384','#36A2EB','#FFCE56','#4BC0C0','#9966FF','#FF9F40','#C9CBCF','#8BFF66'];
+
+let saranaChart = null;
+
+function updateSaranaChart(kategori) {
+    const labels = saranaData.map(d => d.rt);
+    const dataValues = saranaData.map(d => d[kategori] || 0);
+    const total = dataValues.reduce((a,b) => a + b, 0);
+
+    if (saranaChart) saranaChart.destroy();
+
+    saranaChart = new Chart(ctxSarana, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: kategori,
+                data: dataValues,
+                backgroundColor: colorsSarana,
+                borderColor: '#fff',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom' },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const value = context.raw;
+                            const percentage = total ? ((value / total) * 100).toFixed(1) : 0;
+                            return `${context.label}: ${value} (${percentage}%)`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Inisialisasi chart awal
+updateSaranaChart('Rambu jalan');
+
+document.getElementById('kategoriSaranaSelect').addEventListener('change', function() {
+    updateSaranaChart(this.value);
+});
+
+</script>
+
+  
+  <div class="map-section animate-on-scroll">
             <h2 class="map-title">🗺️ Peta Potensi Alam Kelurahan Sambuli</h2>
             <div class="map-container">
                 <img src="{{ asset('images/gambar-potensi.jpg') }}" alt="Peta Potensi Kelurahan Sambuli">
