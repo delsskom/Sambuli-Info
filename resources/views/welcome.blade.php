@@ -986,12 +986,12 @@
 
             <!-- Slide 2 (contoh tambahan foto) -->
             <div class="doc-slide">
-            <div class="doc-card"><img src="images/foto1.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 1</p></div></div>
-            <div class="doc-card"><img src="images/foto2.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 2</p></div></div>
-            <div class="doc-card"><img src="images/foto3.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 3</p></div></div>
-            <div class="doc-card"><img src="images/foto4.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 4</p></div></div>
-            <div class="doc-card"><img src="images/foto5.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 5</p></div></div>
-            <div class="doc-card"><img src="images/foto6.png" alt=""><div class="doc-overlay"><p>Foto Tambahan 6</p></div></div>
+            <div class="doc-card"><img src="images/sambuli11.png" alt=""><div class="doc-overlay"><p>Masjid RT 1</p></div></div>
+            <div class="doc-card"><img src="images/sambuli14.png" alt=""><div class="doc-overlay"><p>Pemandangan Belakang Pondok</p></div></div>
+            <div class="doc-card"><img src="images/sambuli13.png" alt=""><div class="doc-overlay"><p>Masjid RT 6</p></div></div>
+            <div class="doc-card"><img src="images/sambuli15.png" alt=""><div class="doc-overlay"><p>Foto Bersama kelompok KKN TEMATIK Kelurahan Sambuli</p></div></div>
+            <div class="doc-card"><img src="images/sambuli12.png" alt=""><div class="doc-overlay"><p>Kantor Kelurahan</p></div></div>
+            <div class="doc-card"><img src="images/sambuli16.png" alt=""><div class="doc-overlay"><p>Senam Bersama</p></div></div>
             </div>
         </div>
         </div>
