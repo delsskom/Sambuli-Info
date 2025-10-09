@@ -484,33 +484,49 @@ document.getElementById('kategoriSaranaSelect').addEventListener('change', funct
 </script>
 
   
-  <div class="map-section animate-on-scroll">
-            <h2 class="map-title">🗺️ Peta Potensi Alam Kelurahan Sambuli</h2>
-            <div class="map-container">
-                <img src="{{ asset('images/gambar-potensi.jpg') }}" alt="Peta Potensi Kelurahan Sambuli">
-            </div>
-        </div>
+  ```html
+<div class="map-section animate-on-scroll">
+    <h2 class="map-title">🗺️ Peta Potensi Alam Kelurahan Sambuli</h2>
+    <div class="map-container">
+        <img src="{{ asset('images/gambar-potensi.jpg') }}" alt="Peta Potensi Alam Kelurahan Sambuli">
     </div>
+</div>
 
-    <script>
-        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
-        }, observerOptions);
+<div class="map-section animate-on-scroll">
+    <h2 class="map-title">🗺️ Peta Potensi Sarana & Prasarana Kelurahan Sambuli</h2>
+    <div class="map-container">
+        <img src="{{ asset('images/SaranadanPrasarana.jpg') }}" alt="Peta Potensi Sarana & Prasarana Kelurahan Sambuli">
+    </div>
+</div>
 
-        document.querySelectorAll('.animate-on-scroll').forEach(el => { observer.observe(el); });
-
-        const tableRows = document.querySelectorAll('.potensi-table tbody tr');
-        tableRows.forEach(row => {
-            row.addEventListener('mouseenter', function(){ this.style.transform = 'scale(1.02)'; });
-            row.addEventListener('mouseleave', function(){ this.style.transform = 'scale(1)'; });
+<script>
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
         });
+    }, observerOptions);
 
-        const floatingElements = document.querySelectorAll('.floating-element');
-        floatingElements.forEach((element, index) => {
-            element.style.animationDelay = `${index * 2}s`;
-            element.style.animationDuration = `${6 + index}s`;
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+
+    const tableRows = document.querySelectorAll('.potensi-table tbody tr');
+    tableRows.forEach(row => {
+        row.addEventListener('mouseenter', function () {
+            this.style.transform = 'scale(1.02)';
         });
-    </script>
-</body>
-</html>
+        row.addEventListener('mouseleave', function () {
+            this.style.transform = 'scale(1)';
+        });
+    });
+
+    const floatingElements = document.querySelectorAll('.floating-element');
+    floatingElements.forEach((element, index) => {
+        element.style.animationDelay = `${index * 2}s`;
+        element.style.animationDuration = `${6 + index}s`;
+    });
+</script>
+```
